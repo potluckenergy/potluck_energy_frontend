@@ -1,7 +1,7 @@
 potluck_energy_frontend
 =======================
 
-How do I get started?
+####How do I get started?
 * Download the .zip or fork the project
 * Install dependencies via ```npm```
 * Visit localhost:5000 in browser
