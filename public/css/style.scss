@@ -18,6 +18,7 @@ $slate: #303A44;
 $modal: rgba(48,58,68,0.9); /* #303A44 a=90% */
 $grey: #8C98A5;
 $cloud: #EBF1F4;
+$stormy: darken($cloud, 20%);
 $white: rgba(255,255,255,0.95);
 .shadow {
   box-shadow: 0px 2px 2px 0px #DFE8EE;
@@ -122,6 +123,7 @@ a:hover {
 .label-sm {
   font-size: 12px;
   line-height: 12px;
+  font-weight: 600;
   color: $grey;
 }
 .label-md {
@@ -253,9 +255,12 @@ input[type=password] {
   overflow: auto;
 }
 
-.panel-narrow {
+.panel-outline {
   @extend .panel;
-  padding: 10px 20px 10px 20px;
+  background: none;
+  box-shadow: none;
+  border: 2px dashed $stormy;
+  height: 531px;
 }
 
 .divider {
@@ -535,14 +540,60 @@ header.header {
   }
 }
 
+.new-project-button {
+  text-align: center;
+  color: $stormy;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: 0.2s color;
+  cursor: pointer;
+
+  margin-top: 50%;
+
+  i { font-size: 40px; line-height: 70px; }
+
+  &:hover {
+    color: lighten($stormy, 5%);
+  }
+  &:active {
+    color: darken($stormy, 5%);
+  }
+}
+
 
 
 
 //
 //  Project
 //
+
+.map-img {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: calc(100% + 50px);
+    margin: -15px -30px 0 -30px;
+  }
+  .name-of-project {
+    position: relative;
+    color: white;
+    font-weight: 400;
+    text-shadow: 0px 3px 8px rgba(0, 0, 0, 1);
+    padding-top: 66%;
+
+    a {
+      color: white;
+    }
+    a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
 .info {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .location,
@@ -557,47 +608,45 @@ header.header {
 
 .funding-bar {
   width: 100%;
-  height: 20px;
-  margin-top: 7px;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 22px;
-}
+  margin-top: 10px;
+  margin-bottom: 3px;
 
-  .progress-left {
-    float: left;
-    border-top-left-radius: $radius;
-    border-bottom-left-radius: $radius;
-    height: 100%;
+  .row {
+    padding-top: 16px;
+  }
+
+  .col-md-4 {
+    line-height: 12px;
+    font-size: 12px;
+    color: $grey;
+
+    &:first-child { text-align: left; }
+    text-align: center;
+    &:last-child { text-align: right; }
+  }
+}
+  
+  .funding-bar-bg {
+    position: absolute;
+    width: calc(100% - 70px);
+    height: 12px;
+    background: $cloud;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+  }
+
+  .funding-bar-progress {
+    position: absolute;
+    width: calc((100% - 70px) * 0.25);
+    height: 12px;
+    background: $blue;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+  }
+  .funding-bar-progress-green {
+    @extend .funding-bar-progress;
     background: $green;
-    padding-left: 5px;
-    -webkit-box-sizing: border-box;
-    overflow: visible;
   }
-  .progress-right {
-    float: right;
-    border-top-right-radius: $radius;
-    border-bottom-right-radius: $radius;
-    height: 100%;
-    background: lighten($green, 25%);
-    text-align: right;
-    padding-right: 5px;
-    -webkit-box-sizing: border-box;
-    overflow: visible;
-  }
-
-.funding-bar-blue {
-  @extend .funding-bar;
-
-  .progress-left { background: $blue; }
-  .progress-right { background: lighten($blue, 25%); }
-}
-
-.progress-label {
-  position: absolute;
-  margin-left: 5px;
-}
-
 
 
 

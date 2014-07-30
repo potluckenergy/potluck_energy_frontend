@@ -940,7 +940,7 @@ hr {
   transform: translate3d(0, 0, 0); }
 
 /* #303A44 a=90% */
-.shadow, .panel, .panel-narrow, header.header {
+.shadow, .panel, .panel-outline, header.header {
   box-shadow: 0px 2px 2px 0px #DFE8EE; }
 
 * {
@@ -1019,6 +1019,7 @@ a:hover {
 .label-sm {
   font-size: 12px;
   line-height: 12px;
+  font-weight: 600;
   color: #8c98a5; }
 
 .label-md {
@@ -1114,7 +1115,7 @@ input[type=password] {
   padding: 20px;
   -webkit-box-sizing: border-box; }
 
-.panel, .panel-narrow {
+.panel, .panel-outline {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 3px;
   padding: 10px 20px 20px 20px;
@@ -1122,8 +1123,11 @@ input[type=password] {
   -webkit-box-sizing: border-box;
   overflow: auto; }
 
-.panel-narrow {
-  padding: 10px 20px 10px 20px; }
+.panel-outline {
+  background: none;
+  box-shadow: none;
+  border: 2px dashed #a9c3d0;
+  height: 531px; }
 
 .divider {
   height: 1px;
@@ -1335,7 +1339,7 @@ nav.nav {
   margin-left: -150px;
   z-index: 1000;
   overflow: auto; }
-  .login .panel, .login .panel-narrow {
+  .login .panel, .login .panel-outline {
     height: 380px;
     width: 100%;
     background: white;
@@ -1393,8 +1397,42 @@ nav.nav {
 .home .h2 {
   color: #8c98a5; }
 
+.new-project-button {
+  text-align: center;
+  color: #a9c3d0;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-transition: 0.2s color;
+  cursor: pointer;
+  margin-top: 50%; }
+  .new-project-button i {
+    font-size: 40px;
+    line-height: 70px; }
+  .new-project-button:hover {
+    color: #baced9; }
+  .new-project-button:active {
+    color: #99b7c7; }
+
+.map-img {
+  position: relative; }
+  .map-img img {
+    position: absolute;
+    width: calc(100% + 50px);
+    margin: -15px -30px 0 -30px; }
+  .map-img .name-of-project {
+    position: relative;
+    color: white;
+    font-weight: 400;
+    text-shadow: 0px 3px 8px black;
+    padding-top: 66%; }
+    .map-img .name-of-project a {
+      color: white; }
+    .map-img .name-of-project a:hover {
+      color: white;
+      text-decoration: underline; }
+
 .info {
-  margin-top: 20px; }
+  margin-top: 25px; }
 
 .location,
 .solar-developer,
@@ -1404,40 +1442,37 @@ nav.nav {
 .funding {
   margin-top: 20px; }
 
-.funding-bar, .funding-bar-blue {
+.funding-bar {
   width: 100%;
-  height: 20px;
-  margin-top: 7px;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 22px; }
+  margin-top: 10px;
+  margin-bottom: 3px; }
+  .funding-bar .row {
+    padding-top: 16px; }
+  .funding-bar .col-md-4 {
+    line-height: 12px;
+    font-size: 12px;
+    color: #8c98a5;
+    text-align: center; }
+    .funding-bar .col-md-4:first-child {
+      text-align: left; }
+    .funding-bar .col-md-4:last-child {
+      text-align: right; }
 
-.progress-left {
-  float: left;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  height: 100%;
-  background: #2bde73;
-  padding-left: 5px;
-  -webkit-box-sizing: border-box;
-  overflow: visible; }
-
-.progress-right {
-  float: right;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  height: 100%;
-  background: #99efbc;
-  text-align: right;
-  padding-right: 5px;
-  -webkit-box-sizing: border-box;
-  overflow: visible; }
-
-.funding-bar-blue .progress-left {
-  background: #46aaff; }
-.funding-bar-blue .progress-right {
-  background: #c5e5ff; }
-
-.progress-label {
+.funding-bar-bg {
   position: absolute;
-  margin-left: 5px; }
+  width: calc(100% - 70px);
+  height: 12px;
+  background: #ebf1f4;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box; }
+
+.funding-bar-progress, .funding-bar-progress-green {
+  position: absolute;
+  width: calc((100% - 70px) * 0.25);
+  height: 12px;
+  background: #46aaff;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box; }
+
+.funding-bar-progress-green {
+  background: #2bde73; }
