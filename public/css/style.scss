@@ -26,6 +26,9 @@ $white: rgba(255,255,255,0.95);
 $radius: 3px;
 
 
+.grey { color: #8C98A5; }
+
+
 //
 //  General
 //
@@ -260,7 +263,7 @@ input[type=password] {
   background: none;
   box-shadow: none;
   border: 2px dashed $stormy;
-  height: 531px;
+  min-height: 558px;
 }
 
 .divider {
@@ -598,12 +601,21 @@ header.header {
 
 .location,
 .solar-developer,
-.land-owner {
+.land-owner,
+.project-size {
   margin-bottom: 15px;
 }
 
+.loadzone { color: $grey; }
+
 .funding {
   margin-top: 20px;
+}
+
+.days-remaining {
+  color: $grey;
+  float: right;
+  font-weight: 400;
 }
 
 .funding-bar {
@@ -649,8 +661,46 @@ header.header {
   }
 
 
+//  Techical
+.table-right { 
+  float: right; 
+  @extend .label-lg; 
+  color: $slate;
+}
+
+.chart {
+  font-size: 10px;
+  margin-bottom: 16px;
+  -webkit-box-sizing: border-box;
+
+  div {
+    background: $cloud;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: right;
+    padding: 0 4px 0 4px;
+    margin-bottom: 1px;
+    -webkit-box-sizing: border-box;
+    overflow: auto;
+
+    .pull-left { color: $grey; }
+  }
 
 
+  .bar.positive { fill: $green; }
+  .bar.negative { fill: #FF382C; }
+   
+  .axis text {
+    font: 10px 'Proxima Nova';
+    fill: $slate;
+  }
+   
+  .axis path, .axis line {
+    fill: none;
+    stroke: $slate;
+    shape-rendering: crispEdges;
+  }
+}
 
 
 

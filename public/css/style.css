@@ -943,6 +943,9 @@ hr {
 .shadow, .panel, .panel-outline, header.header {
   box-shadow: 0px 2px 2px 0px #DFE8EE; }
 
+.grey {
+  color: #8C98A5; }
+
 * {
   margin: 0;
   padding: 0;
@@ -1027,7 +1030,7 @@ a:hover {
   line-height: 14px;
   color: #8c98a5; }
 
-.label-lg {
+.label-lg, .table-right {
   font-size: 18px;
   line-height: 32px;
   color: #8c98a5; }
@@ -1127,7 +1130,7 @@ input[type=password] {
   background: none;
   box-shadow: none;
   border: 2px dashed #a9c3d0;
-  height: 531px; }
+  min-height: 558px; }
 
 .divider {
   height: 1px;
@@ -1436,11 +1439,20 @@ nav.nav {
 
 .location,
 .solar-developer,
-.land-owner {
+.land-owner,
+.project-size {
   margin-bottom: 15px; }
+
+.loadzone {
+  color: #8c98a5; }
 
 .funding {
   margin-top: 20px; }
+
+.days-remaining {
+  color: #8c98a5;
+  float: right;
+  font-weight: 400; }
 
 .funding-bar {
   width: 100%;
@@ -1476,3 +1488,34 @@ nav.nav {
 
 .funding-bar-progress-green {
   background: #2bde73; }
+
+.table-right {
+  float: right;
+  color: #303a44; }
+
+.chart {
+  font-size: 10px;
+  margin-bottom: 16px;
+  -webkit-box-sizing: border-box; }
+  .chart div {
+    background: #ebf1f4;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: right;
+    padding: 0 4px 0 4px;
+    margin-bottom: 1px;
+    -webkit-box-sizing: border-box;
+    overflow: auto; }
+    .chart div .pull-left {
+      color: #8c98a5; }
+  .chart .bar.positive {
+    fill: #2bde73; }
+  .chart .bar.negative {
+    fill: #FF382C; }
+  .chart .axis text {
+    font: 10px 'Proxima Nova';
+    fill: #303a44; }
+  .chart .axis path, .chart .axis line {
+    fill: none;
+    stroke: #303a44;
+    shape-rendering: crispEdges; }
