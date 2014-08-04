@@ -9,5 +9,5 @@ potluck_energy_frontend
   cd express-template
   npm install
   ...
-  node app.js
+  foreman start
 ```
