@@ -20,6 +20,7 @@ $grey: #8C98A5;
 $cloud: #EBF1F4;
 $stormy: darken($cloud, 20%);
 $white: rgba(255,255,255,0.95);
+$red: #FF382C;
 .shadow {
   box-shadow: 0px 2px 2px 0px #DFE8EE;
 }
@@ -162,6 +163,18 @@ p {
 
 
 //  Buttons
+.button-sm {
+  background: #000000;
+  border-radius: $radius;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-transition: 0.2s all;
+}
 .button-md {
   background: #000000;
   border-radius: $radius;
@@ -212,6 +225,19 @@ p {
     color: $cloud;
   }
 }
+.button-red {
+  background: $red;
+  color: white;
+
+  &:hover {
+    background: lighten($red, 10%);
+    color: white;
+  }
+  &:active {
+    background: darken($red, 5%);
+    color: $cloud;
+  }
+}
 .button-disabled {
   background: $white;
   border: 2px solid $cloud;
@@ -222,6 +248,10 @@ p {
     color: darken($cloud, 10%);
   }
 }
+.button-full-width {
+  width: 100%;
+  text-align: center;
+}
 
 
 
@@ -229,6 +259,7 @@ p {
 //  Forms and inputs
 //
 input[type=text],
+input[type=email],
 input[type=password] {
   width: 100%;
   background: $cloud;
@@ -236,6 +267,16 @@ input[type=password] {
   padding: 4px 10px 4px 10px;
   margin-bottom: 4px;
 }
+
+input[type=month] {
+  width: 100%;
+  background: $cloud;
+  border-radius: $radius;
+  padding: 4px 10px 4px 10px;
+  margin-bottom: 4px;
+}
+
+.input-label {}
 
 
 
@@ -448,7 +489,7 @@ header.header {
   overflow: auto;
 
   .panel {
-    height: 380px;
+    height: 400px;
     width: 100%;
     background: white;
     box-shadow: none;
@@ -470,6 +511,7 @@ header.header {
   input[type=email] {
     background: white;
     line-height: 40px;
+    padding: 0;
   }
   input[type=password] {
     background: white;
@@ -509,7 +551,7 @@ header.header {
 .footer {
 
   .container {
-    padding: 0;
+    padding: 0 0 20px 0;
   }
   
   ul {
@@ -660,12 +702,26 @@ header.header {
     background: $green;
   }
 
+//  Schematic
+.schematic {
+  img {
+    position: absolute;
+    max-height: 100%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
 
 //  Techical
 .table-right { 
   float: right; 
   @extend .label-lg; 
   color: $slate;
+  padding: 0 0 5px 0;
 }
 
 .chart {
@@ -688,7 +744,7 @@ header.header {
 
 
   .bar.positive { fill: $green; }
-  .bar.negative { fill: #FF382C; }
+  .bar.negative { fill: $red; }
    
   .axis text {
     font: 10px 'Proxima Nova';
@@ -701,6 +757,59 @@ header.header {
     shape-rendering: crispEdges;
   }
 }
+
+// Environmental
+.trees { color: $green; }
+.cars { color: $blue; }
+
+.trees i,
+.cars i { margin-right: 5px; }
+
+
+
+//
+//  Dashboard
+//
+
+.add-new-card { margin-top: 30px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

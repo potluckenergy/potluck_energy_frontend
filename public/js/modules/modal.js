@@ -7,7 +7,6 @@ define([
 ) {
   
   var showLogin = function() {
-
     //  show modal
     $('#modal').fadeIn('fast');
 
@@ -24,7 +23,6 @@ define([
         $('#modal').html('<div id="modal-screen" class="modal-screen"></div>');
       }, 500);
     });
-
   }
 
   return {

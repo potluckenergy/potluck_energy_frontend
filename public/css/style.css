@@ -1053,6 +1053,18 @@ p {
   font-weight: 600;
   margin-bottom: 1em; }
 
+.button-sm {
+  background: #000000;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-transition: 0.2s all; }
+
 .button-md {
   background: #000000;
   border-radius: 3px;
@@ -1097,6 +1109,16 @@ p {
     background: #20cf67;
     color: #ebf1f4; }
 
+.button-red {
+  background: #ff382c;
+  color: white; }
+  .button-red:hover {
+    background: #ff685f;
+    color: white; }
+  .button-red:active {
+    background: #ff2013;
+    color: #ebf1f4; }
+
 .button-disabled {
   background: rgba(255, 255, 255, 0.95);
   border: 2px solid #ebf1f4;
@@ -1105,8 +1127,20 @@ p {
   .button-disabled:hover {
     color: #cadae2; }
 
+.button-full-width {
+  width: 100%;
+  text-align: center; }
+
 input[type=text],
+input[type=email],
 input[type=password] {
+  width: 100%;
+  background: #ebf1f4;
+  border-radius: 3px;
+  padding: 4px 10px 4px 10px;
+  margin-bottom: 4px; }
+
+input[type=month] {
   width: 100%;
   background: #ebf1f4;
   border-radius: 3px;
@@ -1343,7 +1377,7 @@ nav.nav {
   z-index: 1000;
   overflow: auto; }
   .login .panel, .login .panel-outline {
-    height: 380px;
+    height: 400px;
     width: 100%;
     background: white;
     box-shadow: none; }
@@ -1361,7 +1395,8 @@ nav.nav {
   font-size: 18px; }
 .login-form input[type=email] {
   background: white;
-  line-height: 40px; }
+  line-height: 40px;
+  padding: 0; }
 .login-form input[type=password] {
   background: white;
   line-height: 40px;
@@ -1381,7 +1416,7 @@ nav.nav {
   margin-top: 1em; }
 
 .footer .container {
-  padding: 0; }
+  padding: 0 0 20px 0; }
 .footer ul {
   float: right;
   width: 140px; }
@@ -1489,9 +1524,19 @@ nav.nav {
 .funding-bar-progress-green {
   background: #2bde73; }
 
+.schematic img {
+  position: absolute;
+  max-height: 100%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+
 .table-right {
   float: right;
-  color: #303a44; }
+  color: #303a44;
+  padding: 0 0 5px 0; }
 
 .chart {
   font-size: 10px;
@@ -1511,7 +1556,7 @@ nav.nav {
   .chart .bar.positive {
     fill: #2bde73; }
   .chart .bar.negative {
-    fill: #FF382C; }
+    fill: #ff382c; }
   .chart .axis text {
     font: 10px 'Proxima Nova';
     fill: #303a44; }
@@ -1519,3 +1564,16 @@ nav.nav {
     fill: none;
     stroke: #303a44;
     shape-rendering: crispEdges; }
+
+.trees {
+  color: #2bde73; }
+
+.cars {
+  color: #46aaff; }
+
+.trees i,
+.cars i {
+  margin-right: 5px; }
+
+.add-new-card {
+  margin-top: 30px; }

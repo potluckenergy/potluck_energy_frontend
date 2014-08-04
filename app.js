@@ -8,4 +8,7 @@ app.get('*', function(req, res){
   res.sendfile('./index.html');
 });
 
-app.listen(5000);
+var port = 5000;
+app.listen(port, function() {
+  console.log('Listening on ' + port);
+});

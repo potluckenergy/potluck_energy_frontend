@@ -10,7 +10,7 @@ define([
   'text!templates/project/project-technical.html',
   'text!templates/project/project-environmental.html',
   'text!templates/project/project-investment.html',
-  'text!cf.csv'
+  'text!templates/project/schematic.html'
 ], function(
   $, 
   _, 
@@ -22,7 +22,7 @@ define([
   technicalTemplate,
   environmentalTemplate,
   investmentTemplate,
-  cfcsv
+  schematicTemplate
 ) {
   
   var ProjectView = Backbone.View.extend({
@@ -83,6 +83,9 @@ define([
       [20, 4000]
     ],
 
+    trees: function() { return 15; },
+    cars: function() { return 5; },
+
 
     //
     //  Overview tab
@@ -95,6 +98,31 @@ define([
       $('#select-overview').parent('li').addClass('current');
       $('#project-content').html(overviewTemplate);
 
+      //  Schematic
+      $('#view-schematic').click( function() {
+        //  show modal
+        $('#modal').fadeIn('fast');
+
+        setTimeout( function() {
+          //  inject template
+          $('#modal').append(schematicTemplate);
+        }, 400);
+
+        var h = $(window).height() - 40;
+
+        $('.schematic').css('height', h);
+
+        $('#modal-screen').click( function() {
+          $('#modal').fadeOut('fast');
+
+          //  remove template
+          setTimeout( function() {
+            $('#modal').html('<div id="modal-screen" class="modal-screen"></div>');
+          }, 500);
+        });
+      });
+
+      //  d3
       d3.select('.production-chart')
         .selectAll('div')
           .data(this.production_data)
@@ -116,7 +144,31 @@ define([
       $('#select-technical').parent('li').addClass('current');
       $('#project-content').html(technicalTemplate);
 
-      //  
+      //  Schematic
+      $('#view-schematic').click( function() {
+        //  show modal
+        $('#modal').fadeIn('fast');
+
+        setTimeout( function() {
+          //  inject template
+          $('#modal').append(schematicTemplate);
+        }, 400);
+
+        var h = $(window).height() - 40;
+
+        $('.schematic').css('height', h);
+
+        $('#modal-screen').click( function() {
+          $('#modal').fadeOut('fast');
+
+          //  remove template
+          setTimeout( function() {
+            $('#modal').html('<div id="modal-screen" class="modal-screen"></div>');
+          }, 500);
+        });
+      });
+
+      //  d3
       d3.select('.production-chart')
         .selectAll('div')
           .data(this.production_data)
@@ -127,13 +179,27 @@ define([
           });
     },
 
-
+    //
+    //  Environmental
+    //
     environmental: function() {
       $('.tab').each( function() {
         $(this).removeClass('current');
       });
       $('#select-environmental').parent('li').addClass('current');
       $('#project-content').html(environmentalTemplate);
+
+      var counter = this.trees();
+      while ( counter > 0 ) {
+        $('.trees').append('<i class="fa fa-tree"></i>');
+        counter = counter - 1;
+      }
+
+      counter = this.cars();
+      while ( counter > 0 ) {
+        $('.cars').append('<i class="fa fa-car"></i>');
+        counter = counter - 1;
+      }
     },
 
 
@@ -159,6 +225,8 @@ define([
 
       $('svg').css('width', '100%');
     },
+
+
 
     render: function() {
       this.$el.prepend(projectTemplate);
