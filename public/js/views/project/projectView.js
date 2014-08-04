@@ -229,7 +229,7 @@ define([
 
 
     render: function() {
-      this.$el.prepend(projectTemplate);
+      this.$el.html(projectTemplate);
       this.overview();
     }
 

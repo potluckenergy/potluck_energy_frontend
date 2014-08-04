@@ -17,7 +17,7 @@ define([
     save: function() {},
 
     render: function() {
-      this.$el.prepend(homeTemplate);
+      this.$el.html(homeTemplate);
     }
 
   });

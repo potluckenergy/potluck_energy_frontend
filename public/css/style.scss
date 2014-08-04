@@ -320,11 +320,13 @@ input[type=month] {
 .list {
   display: block;
 
-  a {
+  a,
+  span {
     font-size: 14px;
     line-height: 30px;
     color: $grey;
     -webkit-transition: 0.2s color;
+    cursor: pointer;
 
     &:hover {
       color: $slate;
@@ -350,16 +352,20 @@ input[type=month] {
     margin-right: 20px;
   }
 
-  a {
+  a,
+  span {
     border-bottom: 1px solid $cloud;
     color: $grey;
     padding-bottom: 14px;
     -webkit-transition: 0.2s color, 0.2s border-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $slate;
+    }
   }
-  a:hover {
-    color: $slate;
-  }
-  li.current a {
+  li.current a,
+  li.current span {
     color: $slate;
     border-color: lighten($slate,20%);
   }
@@ -408,11 +414,13 @@ header.header {
     ul {
       li { margin-left: 20px; }
 
-      a.link {
+      a.link,
+      span.link {
         font-size: 14px;
         font-weight: 600;
         color: $slate;
         -webkit-transition: color 0.2s;
+        cursor: pointer;
 
         &:hover { color: $grey; }
       }

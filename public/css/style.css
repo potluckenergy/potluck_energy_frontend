@@ -1177,12 +1177,15 @@ input[type=month] {
 
 .list {
   display: block; }
-  .list a {
+  .list a,
+  .list span {
     font-size: 14px;
     line-height: 30px;
     color: #8c98a5;
-    -webkit-transition: 0.2s color; }
-    .list a:hover {
+    -webkit-transition: 0.2s color;
+    cursor: pointer; }
+    .list a:hover,
+    .list span:hover {
       color: #303a44; }
   .list ul {
     display: none;
@@ -1195,14 +1198,18 @@ input[type=month] {
 
 .tab-bar li {
   margin-right: 20px; }
-.tab-bar a {
+.tab-bar a,
+.tab-bar span {
   border-bottom: 1px solid #ebf1f4;
   color: #8c98a5;
   padding-bottom: 14px;
-  -webkit-transition: 0.2s color, 0.2s border-color; }
-.tab-bar a:hover {
-  color: #303a44; }
-.tab-bar li.current a {
+  -webkit-transition: 0.2s color, 0.2s border-color;
+  cursor: pointer; }
+  .tab-bar a:hover,
+  .tab-bar span:hover {
+    color: #303a44; }
+.tab-bar li.current a,
+.tab-bar li.current span {
   color: #303a44;
   border-color: #5a6d80; }
 
@@ -1328,12 +1335,15 @@ nav.nav {
   padding: 14px 0 14px 0; }
   nav.nav ul li {
     margin-left: 20px; }
-  nav.nav ul a.link {
+  nav.nav ul a.link,
+  nav.nav ul span.link {
     font-size: 14px;
     font-weight: 600;
     color: #303a44;
-    -webkit-transition: color 0.2s; }
-    nav.nav ul a.link:hover {
+    -webkit-transition: color 0.2s;
+    cursor: pointer; }
+    nav.nav ul a.link:hover,
+    nav.nav ul span.link:hover {
       color: #8c98a5; }
 
 .menu {

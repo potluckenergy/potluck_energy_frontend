@@ -82,7 +82,7 @@ define([
     },
 
     render: function() {
-      this.$el.prepend(dashboardTemplate);
+      this.$el.html(dashboardTemplate);
       this.selectOverview();
     }
 

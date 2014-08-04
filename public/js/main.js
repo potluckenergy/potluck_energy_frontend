@@ -7,9 +7,19 @@ require.config({
     'text': 'lib/text.min',
     'd3': 'lib/d3.min',
     'chart': 'lib/column-chart',
-    'templates': '../templates'
+    'templates': '../templates',
+    'modules': '../modules'
   }
 });
+
+
+require(['jquery', 'backbone'], function($, Backbone) {
+  $(document.body).on('click', 'a', function(e){
+    e.preventDefault();
+    Backbone.history.navigate(e.currentTarget.pathname, {trigger: true});
+  });
+});
+
 
 require(['jquery', 'modules/modal'], function($, modal) {
   $('#login').click( function() {
@@ -19,8 +29,8 @@ require(['jquery', 'modules/modal'], function($, modal) {
 
 
 //
-//  initialize app
+//  initialize app router
 //
-require(['app'], function(App) {
-  App.initialize();
+require(['router'], function(Router) {
+  Router.initialize();
 });

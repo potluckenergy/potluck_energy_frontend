@@ -13,7 +13,7 @@ define([
     events: {},
 
     render: function() {
-      this.$el.prepend(legalTemplate);
+      this.$el.html(legalTemplate);
     }
 
   });

@@ -13,7 +13,7 @@ define([
     events: {},
 
     render: function() {
-      this.$el.prepend(signupTemplate);
+      this.$el.html(signupTemplate);
     }
 
   });
