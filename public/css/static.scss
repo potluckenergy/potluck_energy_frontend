@@ -154,10 +154,10 @@ body {
   margin-top: -300px;
   margin-left: -150px;
   z-index: 1000;
-  overflow: auto;
+  overflow: hidden;
 
   .panel {
-    height: 400px;
+    height: 412px;
     width: 100%;
     background: white;
     box-shadow: none;
