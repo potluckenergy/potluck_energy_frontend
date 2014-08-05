@@ -475,84 +475,6 @@ header.header {
 
 
 
-
-//
-//  Signup
-//
-.signup {}
-
-
-
-//
-//  Login
-//
-.login {
-  position: absolute;
-  width: 300px;
-  top: 50%;
-  left: 50%;
-  margin-top: -300px;
-  margin-left: -150px;
-  z-index: 1000;
-  overflow: auto;
-
-  .panel {
-    height: 400px;
-    width: 100%;
-    background: white;
-    box-shadow: none;
-  }
-}
-.logo-center {
-  height: 45px;
-  background: url(../media/logo-sm.png) no-repeat center;
-}
-.login-note {
-  font-size: 14px;
-  color: $grey;
-  padding: 15px 0 15px 0;
-}
-.login-form {
-  input {
-    font-size: 18px;
-  }
-  input[type=email] {
-    background: white;
-    line-height: 40px;
-    padding: 0;
-  }
-  input[type=password] {
-    background: white;
-    line-height: 40px;
-    padding: 0;
-  }
-  input[type=submit] {
-    width: 100%;
-    margin: 10px 0 10px 0;
-  }
-  .remember {
-    text-align: center;
-    input { margin-right: 5px; }
-    label {
-      color: $grey;
-      font-size: 14px;
-    }
-  }
-}
-
-
-
-
-//
-//  About
-//
-.about {}
-.about-list {
-  margin-top: 1em;
-}
-
-
-
 //
 //  Footer
 //
@@ -780,26 +702,6 @@ header.header {
 //
 
 .add-new-card { margin-top: 30px; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

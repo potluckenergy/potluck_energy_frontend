@@ -1,0 +1,217 @@
+// sass --watch static.scss:static.css
+
+@import "app.css";
+
+$blue: #46AAFF;
+$green: #2BDE73;
+$slate: #303A44;
+$modal: rgba(48,58,68,0.9); /* #303A44 a=90% */
+$grey: #8C98A5;
+$cloud: #EBF1F4;
+$stormy: darken($cloud, 20%);
+$white: rgba(255,255,255,0.95);
+.shadow {
+  box-shadow: 0px 2px 2px 0px #DFE8EE;
+}
+$radius: 3px;
+
+
+html,
+body {
+  background: white;
+}
+
+
+.landing-header {
+  width: 100%;
+  border-bottom: 1px solid $cloud;
+  -webkit-user-select: none;
+
+  .container { padding: 0; }
+
+  .landing-nav {
+    li {
+      line-height: 56px;
+      margin-right: 20px;
+
+      a {
+        color: $grey;
+        font-size: 15px;
+        font-weight: 600;
+        -webkit-transition: all 0.2s;
+      }
+      a:hover {
+        color: $stormy;
+      }
+      a:active { color: $grey; }
+    }
+  }
+
+  .logo {
+    background: url(../media/pe.png) center no-repeat;
+    height: 56px;
+  }
+
+  .landing-login {
+    a {
+      float: right;
+      border-radius: 3px;
+      border: 1px solid $cloud;
+      font-size: 15px;
+      font-weight: 600;
+      color: $grey;
+      padding: 3px 10px 3px 10px;
+      margin: 12px 0 12px 0;
+      -webkit-transition: all 0.2s;
+    }
+    a:hover {
+      color: $stormy;
+    }
+    a:active {
+      color: $grey;
+      border-color: $stormy;
+    }
+  }
+}
+
+
+
+.tagline {
+  .container { padding: 70px 0 60px 0; }
+}
+
+  .hero {
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: 600;
+    text-align: center;
+    color: $slate;
+    margin: 0 auto;
+
+    span {
+      border-bottom: 4px solid $cloud;
+      -webkit-transition: border-color 0.5s;
+    }
+  }
+
+  .call-to-action {
+    text-align: center;
+    padding-top: 60px;
+  }
+
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: $cloud;
+  margin: 0;
+}
+.divider-narrow {
+  @extend .divider;
+  width: 75px;
+  margin: 0 auto;
+}
+
+
+.three-parties {
+  .container { padding: 70px 0 70px 0; }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $grey;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey;
+  }
+}
+
+  .money { font-size: 16px; color: #F9C126; margin-right: 20px; }
+  .energy { font-size: 16px; color: #F6ED50; margin-right: 20px; }
+  .building { font-size: 16px; color: #E99221; margin-right: 20px; }
+
+
+.demo {
+  padding: 60px 0 80px 0;
+
+  img { margin: 0 auto; }
+}
+
+
+
+//
+//  Login
+//
+.login {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -150px;
+  z-index: 1000;
+  overflow: auto;
+
+  .panel {
+    height: 400px;
+    width: 100%;
+    background: white;
+    box-shadow: none;
+  }
+
+  .divider {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: $cloud;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+.logo-center {
+  height: 45px;
+  background: url(../media/logo-sm.png) no-repeat center;
+}
+.login-note {
+  font-size: 14px;
+  color: $grey;
+  padding: 30px 0 15px 0;
+}
+.login-form {
+  input {
+    font-size: 18px;
+  }
+  input[type=email] {
+    background: white;
+    line-height: 40px;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  input[type=password] {
+    background: white;
+    line-height: 40px;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  input[type=submit] {
+    width: 100%;
+    margin: 30px 0 10px 0;
+  }
+  .remember {
+    text-align: center;
+    input { margin-right: 5px; }
+    label {
+      color: $grey;
+      font-size: 14px;
+    }
+  }
+}
+
+
+

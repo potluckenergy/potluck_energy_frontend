@@ -26,10 +26,8 @@ define([
   
   var AppRouter = Backbone.Router.extend({
     routes: {
-      //  '/'
       '': 'root',
 
-      //  ...
       'dashboard': 'dashboard',
       'signup': 'signup',
       'legal': 'legal',

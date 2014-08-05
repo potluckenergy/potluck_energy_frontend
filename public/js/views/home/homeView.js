@@ -7,7 +7,7 @@ define([
 ], function($, _, Backbone, homeTemplate) {
   
   var HomeView = Backbone.View.extend({
-    
+
     el: $('#main'),
 
     events: {
@@ -17,7 +17,7 @@ define([
     save: function() {},
 
     render: function() {
-      this.$el.html(homeTemplate);
+      this.$el.html( homeTemplate );
     }
 
   });

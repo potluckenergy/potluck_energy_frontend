@@ -21,13 +21,6 @@ require(['jquery', 'backbone'], function($, Backbone) {
 });
 
 
-require(['jquery', 'modules/modal'], function($, modal) {
-  $('#login').click( function() {
-    modal.showLogin();
-  });
-});
-
-
 //
 //  initialize app router
 //
