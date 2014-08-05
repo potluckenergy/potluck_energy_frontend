@@ -3,7 +3,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/Contact.html'
+  'text!templates/contact.html'
 ], function($, _, Backbone, ContactTemplate) {
   
   var ContactView = Backbone.View.extend({
