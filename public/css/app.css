@@ -1361,8 +1361,11 @@ nav.nav {
 .main {
   padding: 60px 0 0 0; }
 
+body.modal-open {
+  overflow: hidden; }
+
 .modal {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
@@ -1371,7 +1374,7 @@ nav.nav {
   z-index: 999; }
 
 .modal-screen {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
