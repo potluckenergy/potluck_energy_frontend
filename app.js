@@ -32,10 +32,7 @@ appRoutes.forEach( function(r) {
 });
 
 //  other routes
-app.get('/', routes.root);
-app.get('/landing', function(req, res) {
-  res.redirect('/');
-});
+app.get('/', routes.landing);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 app.get('/legal', routes.legal);

@@ -9,7 +9,7 @@ exports.index = function(req, res) {
   res.render('index', {layout: 'app'});
 }
 
-exports.root = function(req, res) {
+exports.landing = function(req, res) {
   res.render('landing', {layout: 'static'});
 }
 

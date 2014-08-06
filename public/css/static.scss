@@ -1,7 +1,10 @@
 // sass --watch static.scss:static.css
 
-@import "app.css";
+@import 'common.scss';
 
+//
+//  Colors + .scss shit
+//
 $blue: #46AAFF;
 $green: #2BDE73;
 $slate: #303A44;
@@ -10,10 +13,12 @@ $grey: #8C98A5;
 $cloud: #EBF1F4;
 $stormy: darken($cloud, 20%);
 $white: rgba(255,255,255,0.95);
+$red: #FF382C;
 .shadow {
   box-shadow: 0px 2px 2px 0px #DFE8EE;
 }
 $radius: 3px;
+.grey { color: #8C98A5; }
 
 
 html,
@@ -228,6 +233,13 @@ body {
 
 
 
+
+
+
+
+//
+//  Media queries
+//
 
 @media (max-width: 768px) {
   .hero {
