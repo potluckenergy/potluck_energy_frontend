@@ -30,6 +30,8 @@ body {
   .container { padding: 0; }
 
   .landing-nav {
+    float: left;
+    width: 33%;
     li {
       line-height: 56px;
       margin-right: 20px;
@@ -48,11 +50,15 @@ body {
   }
 
   .logo {
+    float: left;
+    width: 33%;
     background: url(../media/pe.png) center no-repeat;
     height: 56px;
   }
 
   .landing-login {
+    float: right;
+    width: 33%;
     a {
       float: right;
       border-radius: 3px;
@@ -138,7 +144,9 @@ body {
 .demo {
   padding: 60px 0 80px 0;
 
-  img { margin: 0 auto; }
+  img {
+    width: 100%;
+    margin: 0 auto; }
 }
 
 
@@ -212,6 +220,39 @@ body {
     }
   }
 }
+
+
+
+
+@media (max-width: 500px) {
+  .hero {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .three-parties {
+    .col-md-4 {
+      padding: 60px 20px 60px 20px;
+    }
+    .col-md-4:first-child,
+    .col-md-4:last-child {
+      padding: 0px 20px 0px 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  
+}
+
+
+
+
+
+
+
+
+
 
 
 
