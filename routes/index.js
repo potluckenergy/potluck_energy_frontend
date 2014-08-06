@@ -24,3 +24,7 @@ exports.contact = function(req, res) {
 exports.legal = function(req, res) {
   res.render('legal', {layout: 'static'});
 }
+
+exports.logout = function(req, res) {
+  res.render('logout', {layout: 'static'})
+}

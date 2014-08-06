@@ -15,7 +15,7 @@ require.config({
 
 require(['jquery', 'backbone'], function($, Backbone) {
   $(document.body).on('click', 'a', function(e){
-    if ($(this).attr('href')!='/') {
+    if ($(this).attr('href')!='/' && $(this).attr('href')!='/logout') {
       e.preventDefault();
     }
     

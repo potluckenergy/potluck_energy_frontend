@@ -90,10 +90,11 @@ header.header {
         color: white;
 
         &:hover {
-          background: $slate;
+          color: lighten($red, 30%);
         }
         &:active {
-          background: black;
+          background: $slate;
+          color: lighten($red, 20%);
         }
       }
     }
