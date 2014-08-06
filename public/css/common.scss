@@ -297,14 +297,6 @@ input[type=month] {
   overflow: auto;
 }
 
-.panel-outline {
-  @extend .panel;
-  background: none;
-  box-shadow: none;
-  border: 2px dashed $stormy;
-  min-height: 558px;
-}
-
 .divider {
   height: 1px;
   width: calc(100% + 40);

@@ -138,6 +138,14 @@ header.header {
   }
 }
 
+.panel-outline {
+  @extend .panel;
+  background: none;
+  box-shadow: none;
+  border: 2px dashed $stormy;
+  min-height: 558px;
+}
+
 .new-project-button {
   text-align: center;
   color: $stormy;
@@ -345,12 +353,18 @@ header.header {
 //
 
 @media (max-width: 768px) {
+  .hide-on-mobile { display: none; }
+
   .nav {
     display: none;
   }
 
   .open-nav {
     display: block;
+  }
+
+  .panel-outline {
+    min-height: 100px;
   }
 
 }
