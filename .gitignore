@@ -8,6 +8,7 @@ logs
 **.sass-cache**
 .sass-cache/
 .sass-cache/*
+../.sass-cache
 
 # Runtime data
 pids
