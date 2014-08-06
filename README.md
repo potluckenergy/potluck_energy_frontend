@@ -1,4 +1,4 @@
-potluck_energy_frontend
+Potluck Energy
 =======================
 
 ####How do I get started?
@@ -10,4 +10,10 @@ potluck_energy_frontend
   npm install
   ...
   foreman start
+```
+
+####Grunt
+* Use ```grunt``` to watch .scss files and minify .css output
+```
+  grunt
 ```
