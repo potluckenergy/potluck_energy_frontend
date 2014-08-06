@@ -22,21 +22,23 @@ app.set('view engine', 'handlebars');
 //
 //  routing for backbone app
 //
-var appRoutes = [
-  '/', 
-  '/dashboard', 
-  '/project', 
-  '/signup', 
-  '/legal', 
-  '/contact'
+var appRoutes = [ 
+  '/dashboard',
+  '/projects',
+  '/project'
 ];
 appRoutes.forEach( function(r) {
   app.get(r, routes.index);
 });
 
 //  other routes
-app.get('/landing', routes.landing);
+app.get('/', routes.root);
+app.get('/landing', function(req, res) {
+  res.redirect('/');
+});
 app.get('/about', routes.about);
+app.get('/contact', routes.contact);
+app.get('/legal', routes.legal);
 
 
 

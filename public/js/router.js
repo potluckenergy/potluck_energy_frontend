@@ -5,9 +5,6 @@ define([
   'views/header/headerView',
   'views/footer/footerView',
   'views/home/homeView',
-  'views/signup/signupView',
-  'views/legal/legalView',
-  'views/contact/contactView',
   'views/dashboard/dashboardView',
   'views/project/projectView'
 ], function(
@@ -17,21 +14,15 @@ define([
   HeaderView,
   FooterView, 
   HomeView,
-  SignupView,
-  LegalView,
-  ContactView,
   DashboardView,
   ProjectView
 ) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
-      '': 'root',
+      'projects': 'root',
 
       'dashboard': 'dashboard',
-      'signup': 'signup',
-      'legal': 'legal',
-      'contact': 'contact',
       'project': 'project'
     }
   });
@@ -48,21 +39,6 @@ define([
     router.on('route:dashboard', function () {
         var dashboardView = new DashboardView();
         dashboardView.render();
-    });
-
-    router.on('route:signup', function () {
-        var signupView = new SignupView();
-        signupView.render();
-    });
-
-    router.on('route:legal', function () {
-        var legalView = new LegalView();
-        legalView.render();
-    });
-
-    router.on('route:contact', function () {
-        var contactView = new ContactView();
-        contactView.render();
     });
 
     router.on('route:project', function () {

@@ -15,7 +15,10 @@ require.config({
 
 require(['jquery', 'backbone'], function($, Backbone) {
   $(document.body).on('click', 'a', function(e){
-    e.preventDefault();
+    if ($(this).attr('href')!='/') {
+      e.preventDefault();
+    }
+    
     Backbone.history.navigate(e.currentTarget.pathname, {trigger: true});
   });
 });

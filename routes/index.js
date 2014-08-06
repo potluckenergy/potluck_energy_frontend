@@ -9,10 +9,18 @@ exports.index = function(req, res) {
   res.render('index', {layout: 'app'});
 }
 
-exports.landing = function(req, res) {
+exports.root = function(req, res) {
   res.render('landing', {layout: 'static'});
 }
 
 exports.about = function(req, res) {
   res.render('about', {layout: 'static'});
+}
+
+exports.contact = function(req, res) {
+  res.render('contact', {layout: 'static'});
+}
+
+exports.legal = function(req, res) {
+  res.render('legal', {layout: 'static'});
 }
