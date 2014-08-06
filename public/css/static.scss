@@ -155,18 +155,19 @@ body {
 //  Login
 //
 .login {
-  position: absolute;
-  width: 300px;
-  top: 50%;
-  left: 50%;
-  margin-top: -300px;
-  margin-left: -150px;
+  height: 100%;
+  width: 100%;
   z-index: 1000;
   overflow: hidden;
 
   .panel {
+    position: absolute;
     height: 412px;
-    width: 100%;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -306px;
+    margin-left: -150px;
     background: white;
     box-shadow: none;
   }
@@ -239,6 +240,13 @@ body {
       padding: 0px 20px 0px 20px;
     }
   }
+
+  .login {
+    .panel {
+      margin-top: -206px;
+    }
+  }
+
 }
 
 @media (max-width: 992px) {
