@@ -52,7 +52,8 @@ header.header {
   background: $white;
   padding: 0 28px 0 28px;
   z-index: 998;
-  @extend .shadow;
+  //  @extend .shadow;
+  border-bottom: 1px solid rgba(235, 241, 244, 0.95);
 }
 
   .brand {
