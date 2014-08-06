@@ -8,6 +8,9 @@ module.exports = function(grunt) {
         files: {
           'public/css/app.css': 'public/css/app.scss',
           'public/css/static.css': 'public/css/static.scss',
+        },
+        options: {
+          style: 'compressed'
         }
       }
     },
@@ -23,6 +26,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  
+
   grunt.registerTask('default',['watch']);
 }
