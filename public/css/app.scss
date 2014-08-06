@@ -58,6 +58,7 @@ header.header {
   .brand {
     float: left;
     background: url(../media/logotype.png) no-repeat;
+    background-size: 161px 36px;
     width: 188px;
     height: 36px;
     margin: 10px 0 10px 0;
@@ -96,25 +97,23 @@ header.header {
       }
     }
   }
-  .menu {
+  .open-nav {
+    display: none;
     float: right;
-    padding: 14px 0 14px 0;
-    margin-top: -20px;
-    overflow: auto;
+    border: 1px solid $cloud;
+    border-radius: $radius;
+    line-height: 36px;
+    padding: 0 12px 0 12px;
+    margin: 9px 0 7px 0;
+    cursor: pointer;
+    -webkit-transition: 0.2s all;
 
-    ul {
-      li {
-        margin-left: 20px;
-      }
+    &:hover {
+      color: $stormy;
     }
-
-    a {
-      @extend .tab;
-      -webkit-transition: 0.2s color;
-
-      &:hover {
-        color: $slate;
-      }
+    &:active {
+      color: $grey;
+      border-color: $stormy;
     }
   }
 
@@ -336,6 +335,41 @@ header.header {
 //  Dashboard
 //
 .add-new-card { margin-top: 30px; }
+
+
+
+
+
+//
+//  Media queries
+//
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .open-nav {
+    display: block;
+  }
+
+}
+
+@media (max-width: 992px) {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
