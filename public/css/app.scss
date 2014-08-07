@@ -83,7 +83,8 @@ header.header {
 
         &:hover { color: $grey; }
       }
-
+    }
+  }
       i.signout {
         background: $grey;
         padding: 6px 8px 6px 8px;
@@ -97,8 +98,7 @@ header.header {
           color: lighten($red, 20%);
         }
       }
-    }
-  }
+
   .open-nav {
     display: none;
     float: right;
@@ -116,6 +116,40 @@ header.header {
     &:active {
       color: $grey;
       border-color: $stormy;
+    }
+  }
+
+  .mobile-nav {
+    display: none;
+    padding: 0;
+
+    ul li {
+      display: block;
+      width: calc(100%+40px);
+      border-bottom: 1px solid $cloud;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 10px 30px 10px 30px;
+    }
+
+    ul li:last-child { border: none; }
+
+    a.link,
+    span.link {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 600;
+      color: $slate;
+      -webkit-transition: color 0.2s;
+      cursor: pointer;
+
+      &:hover { color: $grey; }
+    }
+
+    .signout {
+      width: 100%;
+      text-align: center;
     }
   }
 

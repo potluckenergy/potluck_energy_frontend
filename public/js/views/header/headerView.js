@@ -28,7 +28,8 @@ define([
     //
     events: {
       'click #login': 'login',
-      //  'click #signup': 'signup'
+      //  'click #signup': 'signup',
+      'click #open-nav': 'mobileNav'
     },
 
     //
@@ -50,6 +51,14 @@ define([
           $('#modal').html('<div id="modal-screen" class="modal-screen"></div>');
         }, 500);
       });
+    },
+
+
+    //
+    //  Mobile nav
+    //
+    mobileNav: function() {
+      $('.mobile-nav').slideToggle('fast');
     }
 
   });
