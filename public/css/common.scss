@@ -256,6 +256,9 @@ p {
 //
 //  Forms and inputs
 //
+::-webkit-input-placeholder {
+  color: $grey;
+}
 input[type=text],
 input[type=email],
 input[type=password] {

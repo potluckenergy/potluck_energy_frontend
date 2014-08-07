@@ -1,19 +1,21 @@
 define([
   'jquery', 
-  'text!templates/login.html'
+  'text!templates/login.html',
+  'text!templates/initiate.html'
 ], function(
   $,
-  loginTemplate
+  loginTemplate,
+  initiateTemplate
 ) {
   
-  var showLogin = function() {
+  var modal = function(template) {
     //  show modal
     $('#modal').fadeIn('fast');
     $("body").addClass("modal-open");
 
     setTimeout( function() {
       //  inject template
-      $('#modal').append(loginTemplate);
+      $('#modal').append(template);
     }, 400);
 
     $('#modal-screen').click( function() {
@@ -26,8 +28,17 @@ define([
     });
   }
 
+  var showLogin = function() {
+    modal(loginTemplate);
+  }
+
+  var showInitiate = function() {
+    modal(initiateTemplate);
+  }
+
   return {
-    showLogin: showLogin
+    showLogin: showLogin,
+    showInitiate: showInitiate
   }
 
 });

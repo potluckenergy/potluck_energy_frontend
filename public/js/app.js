@@ -18,7 +18,6 @@ require(['jquery', 'backbone'], function($, Backbone) {
     if ($(this).attr('href')!='/' && $(this).attr('href')!='/logout') {
       e.preventDefault();
     }
-    
     Backbone.history.navigate(e.currentTarget.pathname, {trigger: true});
   });
 });

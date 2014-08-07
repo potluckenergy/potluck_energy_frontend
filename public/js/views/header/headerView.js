@@ -4,8 +4,9 @@ define([
   'underscore',
   'backbone',
   'text!templates/header.html',
-  'text!templates/login.html'
-], function($, _, Backbone, headerTemplate, loginTemplate) {
+  'text!templates/login.html',
+  '../../../js/modules/modal'
+], function($, _, Backbone, headerTemplate, loginTemplate, modal) {
   
   var HeaderView = Backbone.View.extend({
     
@@ -37,21 +38,7 @@ define([
     //  Login modal
     //
     login: function() {
-      //  show modal
-      $('#modal').fadeIn('fast');
-
-      //  inject template
-      setTimeout( function() {
-        $('#modal').append(loginTemplate);
-      }, 400);
-
-      //  clear modal
-      $('#modal-screen').click( function() {
-        $('#modal').fadeOut('fast');
-        setTimeout( function() {
-          $('#modal').html('<div id="modal-screen" class="modal-screen"></div>');
-        }, 500);
-      });
+      modal.showLogin();
     },
 
 
@@ -60,7 +47,7 @@ define([
     //
     mobileNav: function() {
       $('.mobile-nav').slideToggle('fast');
-    }
+    },
 
   });
 

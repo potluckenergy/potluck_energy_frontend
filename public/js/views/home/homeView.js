@@ -3,8 +3,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/home.html'
-], function($, _, Backbone, homeTemplate) {
+  'text!templates/home.html',
+  '../../../js/modules/modal'
+], function($, _, Backbone, homeTemplate, modal) {
   
   var HomeView = Backbone.View.extend({
 
@@ -15,6 +16,10 @@ define([
     },
 
     save: function() {},
+
+    initiate: function() {
+      modal.showInitiate();
+    },
 
     render: function() {
       this.$el.html( homeTemplate );

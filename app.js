@@ -25,7 +25,8 @@ app.set('view engine', 'handlebars');
 var appRoutes = [ 
   '/dashboard',
   '/projects',
-  '/project'
+  '/project',
+  '/initiate'
 ];
 appRoutes.forEach( function(r) {
   app.get(r, routes.index);

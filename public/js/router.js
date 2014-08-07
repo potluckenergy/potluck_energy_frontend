@@ -6,7 +6,8 @@ define([
   'views/footer/footerView',
   'views/home/homeView',
   'views/dashboard/dashboardView',
-  'views/project/projectView'
+  'views/project/projectView',
+  'views/initiate/initiateView'
 ], function(
   $,
   _, 
@@ -15,7 +16,8 @@ define([
   FooterView, 
   HomeView,
   DashboardView,
-  ProjectView
+  ProjectView,
+  InitiateView
 ) {
   
   var AppRouter = Backbone.Router.extend({
@@ -23,7 +25,8 @@ define([
       'projects': 'root',
 
       'dashboard': 'dashboard',
-      'project': 'project'
+      'project': 'project',
+      'initiate': 'initiate'
     }
   });
   
@@ -44,6 +47,11 @@ define([
     router.on('route:project', function () {
         var projectView = new ProjectView();
         projectView.render();
+    });
+
+    router.on('route:initiate', function () {
+        var initiateView = new InitiateView();
+        initiateView.render();
     });
 
     var headerView = new HeaderView();

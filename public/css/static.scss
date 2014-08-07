@@ -265,7 +265,7 @@ body {
   border-bottom: 1px solid $cloud;
   padding: 5px 0 22px 0;
 
-  .h2 { color: $grey; }
+  .h2 { color: $grey; margin-left: -5px; }
 }
 
 .about-list {
@@ -352,6 +352,19 @@ body {
 
 @media (max-width: 992px) {
   
+
+
+  .about-header {
+    .h2 { color: $grey; margin-left: -13px; }
+  }
+
+  .about-list {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid $cloud;
+  }
+
 }
 
 
