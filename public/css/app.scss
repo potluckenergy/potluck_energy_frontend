@@ -7,7 +7,7 @@ $modal: rgba(48,58,68,0.9); /* #303A44 a=90% */
 $grey: #8C98A5;
 $cloud: #EBF1F4;
 $stormy: darken($cloud, 20%);
-$white: rgba(255,255,255,0.95);
+$white: rgba(255,255,255,0.97);
 $red: #FF382C;
 .shadow {
   box-shadow: 0px 2px 2px 0px #DFE8EE;
@@ -133,6 +133,7 @@ header.header {
       padding: 10px 30px 10px 30px;
     }
 
+    ul li:first-child { border-top: 1px solid $cloud; }
     ul li:last-child { border: none; }
 
     a.link,
@@ -150,6 +151,7 @@ header.header {
 
     .signout {
       width: 100%;
+      line-height: 30px;
       text-align: center;
     }
   }

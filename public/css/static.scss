@@ -12,7 +12,7 @@ $modal: rgba(48,58,68,0.9); /* #303A44 a=90% */
 $grey: #8C98A5;
 $cloud: #EBF1F4;
 $stormy: darken($cloud, 20%);
-$white: rgba(255,255,255,0.95);
+$white: rgba(255,255,255,0.97);
 $red: #FF382C;
 .shadow {
   box-shadow: 0px 2px 2px 0px #DFE8EE;
@@ -206,7 +206,8 @@ body {
 }
 .logo-center {
   height: 45px;
-  background: url(../media/logo-sm.png) no-repeat center;
+  background: url(../media/pe.png) no-repeat center;
+  background-size: 34px 36px;
 }
 .login-note {
   font-size: 14px;
@@ -313,6 +314,12 @@ body {
 //
 
 @media (max-width: 768px) {
+  .divider {
+    width: calc(100%+40px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .hero {
     font-size: 26px;
     line-height: 30px;
