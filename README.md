@@ -9,7 +9,7 @@ The app is split into two parts:
   * Projects
   * Project/id
   * Dashboard
-  * Initiate'
+  * Initiate
 
 ####How do I get started?
 * Download the .zip or clone the project
