@@ -28,9 +28,12 @@ body {
 
 
 .landing-header {
+  position: fixed;
   width: 100%;
+  background: $white;
   border-bottom: 1px solid $cloud;
   -webkit-user-select: none;
+  z-index: 50;
 
   .container { padding: 0; }
 
@@ -87,6 +90,15 @@ body {
 
 
 
+//
+//  Main
+//
+.main {
+  padding: 60px 0 0 0;
+  z-index: 40;
+}
+
+
 .tagline {
   .container { padding: 70px 0 60px 0; }
 }
@@ -119,7 +131,6 @@ body {
   height: 1px;
   width: 100%;
   background: $cloud;
-  margin: 0;
 }
 .divider-narrow {
   @extend .divider;
@@ -243,6 +254,53 @@ body {
   font-weight: 600;
   padding: 15% 0 15% 0;
 }
+
+
+
+//
+//  About
+//
+.about-header {
+  margin: 0 0 22px 0;
+  border-bottom: 1px solid $cloud;
+  padding: 5px 0 22px 0;
+
+  .h2 { color: $grey; }
+}
+
+.about-list {
+  position: fixed;
+
+  ul li {
+    display: block;
+  }
+  a {
+    font-size: 14px;
+    line-height: 28px;
+    color: $grey;
+    -webkit-transition: 0.2s all;
+
+    &:hover {
+      color: $slate;
+    }
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+}
+
+.text-container {
+
+  p {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+}
+
+
 
 
 

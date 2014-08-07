@@ -29,7 +29,8 @@ define([
     events: {
       'click #login': 'login',
       //  'click #signup': 'signup',
-      'click #open-nav': 'mobileNav'
+      'click #open-nav': 'mobileNav',
+      'click .mobile-link': 'mobileNav'
     },
 
     //
