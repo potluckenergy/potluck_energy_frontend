@@ -12,7 +12,7 @@ define([
     
     model: Signup,
 
-    firebase: 'https://potluck-energy.firebaseio.com'
+    firebase: 'https://potluck-energy.firebaseio.com/signups'
 
   });
 
