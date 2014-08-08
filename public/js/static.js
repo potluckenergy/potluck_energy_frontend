@@ -7,9 +7,27 @@ require.config({
     'text': 'lib/text.min',
     'd3': 'lib/d3.min',
     'chart': 'lib/column-chart',
-    'templates': '/templates'
+    'templates': '/templates',
+    'firebase': 'lib/firebase.min',
+    'backfire': 'lib/backbone-firebase.min'
   }
 });
+
+
+//
+//  Views
+//
+require([
+  'jquery', 
+  'underscore', 
+  'backbone', 
+  'views/signup/signupView'
+], function($, _, Backbone, SignupView) {
+
+  new SignupView();
+
+});
+
 
 
 //
