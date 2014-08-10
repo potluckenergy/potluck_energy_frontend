@@ -17,10 +17,6 @@ exports.about = function(req, res) {
   res.render('about', {layout: 'static'});
 }
 
-exports.contact = function(req, res) {
-  res.render('contact', {layout: 'static'});
-}
-
 exports.legal = function(req, res) {
   res.render('legal', {layout: 'static'});
 }

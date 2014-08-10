@@ -21,20 +21,14 @@ require([
   'jquery', 
   'underscore', 
   'backbone', 
-  'views/signup/signupView'
-], function($, _, Backbone, SignupView) {
+  'views/signup/signupView',
+  'views/login/loginView'
+], function($, _, Backbone, SignupView, LoginView) {
 
   new SignupView();
 
-});
-
-
-
-//
-//  modules
-//
-require(['../js/modules/modal'], function(modal) {
   $('#login').click( function() {
-    modal.showLogin();
+    new LoginView();
   });
+
 });

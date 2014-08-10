@@ -26,7 +26,8 @@ var appRoutes = [
   '/dashboard',
   '/projects',
   '/project',
-  '/initiate'
+  '/initiate',
+  '/login'
 ];
 appRoutes.forEach( function(r) {
   app.get(r, routes.index);
@@ -35,7 +36,6 @@ appRoutes.forEach( function(r) {
 //  other routes
 app.get('/', routes.landing);
 app.get('/about', routes.about);
-app.get('/contact', routes.contact);
 app.get('/legal', routes.legal);
 app.get('/logout', routes.logout);
 

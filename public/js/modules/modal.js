@@ -1,10 +1,8 @@
 define([
-  'jquery', 
-  'text!templates/login.html',
+  'jquery',
   'text!templates/initiate.html'
 ], function(
   $,
-  loginTemplate,
   initiateTemplate
 ) {
   
@@ -28,16 +26,12 @@ define([
     });
   }
 
-  var showLogin = function() {
-    modal(loginTemplate);
-  }
-
   var showInitiate = function() {
     modal(initiateTemplate);
   }
 
   return {
-    showLogin: showLogin,
+    modal: modal,
     showInitiate: showInitiate
   }
 

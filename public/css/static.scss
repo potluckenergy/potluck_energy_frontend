@@ -46,7 +46,7 @@ body {
 
       a {
         color: $grey;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         -webkit-transition: all 0.2s;
       }
@@ -60,7 +60,7 @@ body {
   .logo {
     float: left;
     width: 33%;
-    background: url(../media/pe.png) center no-repeat;
+    background: url(../media/logo.png) center no-repeat;
     background-size: 33px 36px;
     height: 56px;
   }
@@ -72,7 +72,7 @@ body {
       float: right;
       border-radius: 3px;
       border: 1px solid $cloud;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 600;
       color: $grey;
       padding: 3px 10px 3px 10px;
@@ -149,6 +149,16 @@ body {
     font-weight: 600;
     color: $grey;
     margin-bottom: 20px;
+
+    i {
+      color: $cloud;
+      cursor: pointer;
+      -webkit-transition: 0.2s all;
+
+      &:hover {
+        color: $stormy;
+      }
+    }
   }
 
   .button-md { 
@@ -271,7 +281,7 @@ body {
 }
 .logo-center {
   height: 45px;
-  background: url(../media/pe.png) no-repeat center;
+  background: url(../media/logo.png) no-repeat center;
   background-size: 34px 36px;
 }
 .login-note {
@@ -295,9 +305,11 @@ body {
     padding-left: 0;
     padding-top: 20px;
   }
-  input[type=submit] {
+  input[type=submit],
+  .button-lg {
     width: 100%;
     margin: 30px 0 10px 0;
+    text-align: center;
   }
   .remember {
     text-align: center;
@@ -379,6 +391,18 @@ body {
 //
 
 @media (max-width: 768px) {
+  .logo {
+    float: left;
+    width: 33%;
+    background: url(../media/logo@2x.png) center no-repeat;
+    background-size: 34px 36px;
+    height: 56px;
+  }
+
+  .logo-center {
+    background: url(../media/logo@2x.png) no-repeat center;
+  }
+
   .divider {
     width: calc(100%+40px);
     margin-left: 0;

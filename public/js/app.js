@@ -8,7 +8,9 @@ require.config({
     'd3': 'lib/d3.min',
     'chart': 'lib/column-chart',
     'templates': '../templates',
-    'modules': '../modules'
+    'modules': '../modules',
+    'firebase': 'lib/firebase.min',
+    'backfire': 'lib/backbone-firebase.min'
   }
 });
 

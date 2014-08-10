@@ -4,21 +4,21 @@ define([
   'underscore',
   'backbone',
   'text!templates/dashboard/dashboard.html',
-  'text!templates/dashboard/dashboard-overview.html',
-  'text!templates/dashboard/dashboard-payments.html',
-  'text!templates/dashboard/dashboard-investments.html',
-  'text!templates/dashboard/dashboard-settings.html',
-  'text!templates/dashboard/dashboard-manage.html'
+  'js/views/dashboard/overviewView.js',
+  'js/views/dashboard/paymentsView.js',
+  'js/views/dashboard/investmentsView.js',
+  'js/views/dashboard/settingsView.js',
+  'js/views/dashboard/manageView.js',
 ], function(
   $, 
   _, 
   Backbone, 
-  dashboardTemplate, 
-  overviewTemplate,
-  paymentsTemplate,
-  investmentsTemplate,
-  settingsTemplate,
-  manageTemplate
+  dashboardTemplate,
+  OverviewView,
+  PaymentsView,
+  InvestmentsView,
+  SettingsView,
+  ManageView
 ) {
   
   var DashboardView = Backbone.View.extend({
@@ -41,8 +41,7 @@ define([
         $(this).removeClass('current');
       });
       $('#select-overview').parent('li').addClass('current');
-      $('#dashboard-section').html('Overview');
-      $('#dashboard-content').html(overviewTemplate);
+      new OverviewView({ el: $('#dashboard-content') });
     },
 
     selectPayments: function() {
@@ -51,7 +50,7 @@ define([
       });
       $('#select-payments').parent('li').addClass('current');
       $('#dashboard-section').html('Payments');
-      $('#dashboard-content').html(paymentsTemplate);
+      new PaymentsView({ el: $('#dashboard-content') });
     },
 
     selectInvestments: function() {
@@ -60,7 +59,7 @@ define([
       });
       $('#select-investments').parent('li').addClass('current');
       $('#dashboard-section').html('Investments');
-      $('#dashboard-content').html(investmentsTemplate);
+      new InvestmentsView({ el: $('#dashboard-content') });
     },
 
     selectSettings: function() {
@@ -69,7 +68,7 @@ define([
       });
       $('#select-settings').parent('li').addClass('current');
       $('#dashboard-section').html('Settings');
-      $('#dashboard-content').html(settingsTemplate);
+      new SettingsView({ el: $('#dashboard-content') });
     },
 
     selectManage: function() {
@@ -78,7 +77,7 @@ define([
       });
       $('#select-manage').parent('li').addClass('current');
       $('#dashboard-section').html('Manage');
-      $('#dashboard-content').html(manageTemplate);
+      new ManageView({ el: $('#dashboard-content') });
     },
 
     render: function() {

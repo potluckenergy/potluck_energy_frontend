@@ -130,7 +130,7 @@ a:hover {
 }
 .label-md {
   font-size: 14px;
-  line-height: 14px;
+  line-height: 32px;
   color: $grey;
 }
 .label-lg {
@@ -167,7 +167,8 @@ p {
   font-size: 12px;
   line-height: 12px;
   font-weight: 600;
-  padding: 5px 10px 5px 10px;
+  padding: 6px 8px 5px 8px;
+  margin: 2px 0 2px 0;
   cursor: pointer;
   -webkit-box-sizing: border-box;
   -webkit-user-select: none;
@@ -293,7 +294,7 @@ input[type=month] {
 .panel {
   background: $white;
   border-radius: 3px;
-  @extend .shadow;
+  // @extend .shadow;
   padding: 10px 20px 20px 20px;
   margin-bottom: 10px;
   -webkit-box-sizing: border-box;
@@ -302,7 +303,7 @@ input[type=month] {
 
 .divider {
   height: 1px;
-  width: calc(100% + 40);
+  width: calc(100% + 40px);
   background: $cloud;
   margin-left: -20px;
   margin-right: -20px;

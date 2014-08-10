@@ -53,8 +53,7 @@ header.header {
   background: $white;
   padding: 0 28px 0 28px;
   z-index: 998;
-  //  @extend .shadow;
-  border-bottom: 1px solid rgba(235, 241, 244, 0.95);
+  border-bottom: 1px solid $cloud;
 }
 
   .brand {
@@ -383,6 +382,15 @@ header.header {
 //
 .add-new-card { margin-top: 30px; }
 
+.load-zones,
+.townships,
+.utility-companies {
+  padding: 20px 0 20px 0;
+}
+  .new-load-zone,
+  .new-township,
+  .new-utility-company { display: none; }
+
 
 
 
@@ -430,6 +438,10 @@ header.header {
 
 @media (max-width: 768px) {
   .hide-on-mobile { display: none; }
+
+  .brand {
+    background: url(../media/logotype@2x.png) no-repeat;
+  }
 
   .nav {
     display: none;
