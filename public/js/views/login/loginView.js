@@ -4,7 +4,7 @@ define([
   'underscore',
   'backbone',
   'text!templates/login.html',
-  '../../../js/modules/modal'
+  'modal'
 ], function($, _, Backbone, loginTemplate, modal) {
   
   var LoginView = Backbone.View.extend({

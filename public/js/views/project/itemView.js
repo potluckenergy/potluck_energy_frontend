@@ -1,10 +1,10 @@
 //  itemView.js
-//  /dashboard
+//  /project
 define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/dashboard/item.html'
+  'text!templates/project/item.html'
 ], function($, _, Backbone, template) {
   
   var ItemView = Backbone.View.extend({

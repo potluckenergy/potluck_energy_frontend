@@ -7,13 +7,16 @@ require.config({
     'backbone': '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
     'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
     'd3': '//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min',
+    'stripe': '//js.stripe.com/v2/',
 
     //  lib
     'firebase': 'lib/firebase.min',
     'backfire': 'lib/backbone-firebase.min',
     'chart': 'lib/column-chart',
     'templates': '../templates',
-    'modules': '../modules'
+    
+    //  modules
+    'modal': 'modules/modal'
   }
 });
 
