@@ -1,15 +1,19 @@
-//  main.js
+//  static.js
 require.config({
   paths: {
-    'jquery': 'lib/jquery.min',
-    'underscore': 'lib/underscore.min',
-    'backbone': 'lib/backbone.min',
-    'text': 'lib/text.min',
-    'd3': 'lib/d3.min',
-    'chart': 'lib/column-chart',
-    'templates': '/templates',
+    //  CDN
+    'jquery': '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min',
+    'underscore': '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min',
+    'backbone': '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min',
+    'text': '//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
+    'd3': '//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min',
+
+    //  lib
     'firebase': 'lib/firebase.min',
-    'backfire': 'lib/backbone-firebase.min'
+    'backfire': 'lib/backbone-firebase.min',
+    'chart': 'lib/column-chart',
+    'templates': '../templates',
+    'modules': '../modules'
   }
 });
 

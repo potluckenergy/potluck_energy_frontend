@@ -26,8 +26,7 @@ var appRoutes = [
   '/dashboard',
   '/projects',
   '/project',
-  '/initiate',
-  '/login'
+  '/initiate'
 ];
 appRoutes.forEach( function(r) {
   app.get(r, routes.index);
@@ -39,6 +38,23 @@ app.get('/about', routes.about);
 app.get('/legal', routes.legal);
 app.get('/logout', routes.logout);
 
+
+//
+//  Error handling
+//
+app.get('*', function(req, res, next) {
+  var err = new Error();
+  err.status = 404;
+  next(err);
+});
+
+// handling 404 errors
+app.use(function(err, req, res, next) {
+  if(err.status !== 404) {
+    return next();
+  }
+  res.render('404', {layout:'static'});
+});
 
 
 var port = Number(process.env.PORT || 5000);
