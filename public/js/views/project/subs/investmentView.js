@@ -10,6 +10,8 @@ define([
   
   var InvestmentView = Backbone.View.extend({
 
+    template: _.template(template),
+
     cf_data: [
       [0,-100000],
       [1,4000],
@@ -39,7 +41,7 @@ define([
     },
 
     render: function() {
-      this.$el.html(template);
+      this.$el.html(this.template(this.model));
       
       //  Cash flow chart
       d3.select(".cf-chart")

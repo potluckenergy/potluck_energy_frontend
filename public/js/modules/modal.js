@@ -1,10 +1,4 @@
-define([
-  'jquery',
-  'text!templates/initiate.html'
-], function(
-  $,
-  initiateTemplate
-) {
+define(['jquery'], function($) {
   
   var modal = function(template) {
     //  show modal
@@ -26,13 +20,14 @@ define([
     });
   }
 
-  var showInitiate = function() {
-    modal(initiateTemplate);
+  var img = function(url) {
+    var template = '<div class="schematic"><img src="' + url + '"></div>';
+    modal(template);
   }
 
   return {
     modal: modal,
-    showInitiate: showInitiate
+    img: img
   }
 
 });

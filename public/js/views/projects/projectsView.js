@@ -3,19 +3,32 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/projects.html'
-], function($, _, Backbone, template) {
+  'text!templates/projects/projects.html',
+  'views/projects/itemView',
+  'collections/projects'
+], function($, _, Backbone, template, ItemView, Projects) {
   
   var ProjectsView = Backbone.View.extend({
 
     el: $('#main'),
 
-    initiate: function() {
-      modal.showInitiate();
+    template: _.template(template),
+
+    projects: function() {
+      var p = new Projects();
+      $.getJSON(p.data, function(data) {
+        $.each(data, function(item, val) {
+          new ItemView({
+            el: $('#projects-list'),
+            model: val
+          });
+        });
+      });
     },
 
     render: function() {
-      this.$el.html(template);
+      this.$el.html(this.template);
+      this.projects();
     }
 
   });

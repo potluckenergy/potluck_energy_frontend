@@ -23,41 +23,42 @@ define([
   var AppRouter = Backbone.Router.extend({
     routes: {
       'projects': 'projects',
-
+      
+      'project:id': 'projectId',
       'dashboard': 'dashboard',
-      'project': 'project',
       'initiate': 'initiate'
+    },
+
+    projects: function() {
+      var projectsView = new ProjectsView();
+      projectsView.render();
+    },
+
+    projectId: function(id) {
+      var projectView = new ProjectView({id:id});
+      projectView.render();
+    },
+
+    dashboard: function() {
+      var dashboardView = new DashboardView();
+      dashboardView.render();
+    },
+
+    initiate: function() {
+      var initiateView = new InitiateView();
+      initiateView.render();
     }
+
   });
   
   var initialize = function(){
 
     var router = new AppRouter;
 
-    router.on('route:projects', function () {
-        var projectsView = new ProjectsView();
-        projectsView.render();
-    });
-
-    router.on('route:dashboard', function () {
-        var dashboardView = new DashboardView();
-        dashboardView.render();
-    });
-
-    router.on('route:project', function () {
-        var projectView = new ProjectView();
-        projectView.render();
-    });
-
-    router.on('route:initiate', function () {
-        var initiateView = new InitiateView();
-        initiateView.render();
-    });
-
     var headerView = new HeaderView();
     var footerView = new FooterView();
 
-    Backbone.history.start({pushState:true});
+    Backbone.history.start({pushState: true}); 
   };
 
   return { 

@@ -11,6 +11,8 @@ define([
   
   var TechnicalView = Backbone.View.extend({
 
+    template: _.template(template),
+
     production_data: [
       {year:1, value:158.0},
       {year:2, value:157.6},
@@ -39,11 +41,13 @@ define([
     },
 
     render: function() {
-      this.$el.html(template);
+      this.$el.html(this.template(this.model));
       
+      var schematic = this.model['schematicUrl'];
+
       //  Schematic
       $('#view-schematic').click( function() {
-        modal.modal(schematicTemplate);
+        modal.img(schematic);
       });
 
       //  d3

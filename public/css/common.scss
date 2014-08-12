@@ -270,9 +270,11 @@ input[type=password] {
   margin-bottom: 4px;
 }
 
-input[type=month] {
+input[type=month],
+input[type=date] {
   width: 100%;
   background: $cloud;
+  color: $grey;
   border-radius: $radius;
   padding: 4px 10px 4px 10px;
   margin-bottom: 4px;

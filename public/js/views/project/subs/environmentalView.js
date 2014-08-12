@@ -8,25 +8,24 @@ define([
   
   var EnvironmentalView = Backbone.View.extend({
 
-    trees: function() { return 15; },
-    cars: function() { return 5; },
+    template: _.template(template),
 
     initialize: function() {
       this.render();
     },
 
     render: function() {
-      this.$el.html(template);
+      this.$el.html(this.template(this.model));
       
       //  render trees
-      var counter = this.trees();
+      var counter = this.model['treesSaved'];
       while ( counter > 0 ) {
         $('.trees').append('<i class="fa fa-tree"></i>');
         counter = counter - 1;
       }
 
       //  render cars
-      counter = this.cars();
+      counter = this.model['milesDriven'];
       while ( counter > 0 ) {
         $('.cars').append('<i class="fa fa-car"></i>');
         counter = counter - 1;

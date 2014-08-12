@@ -25,8 +25,8 @@ define([
     
     el: $('#main'),
 
+
     events: {
-      'click #save': 'save',
       'click #select-overview': 'selectOverview',
       'click #select-payments': 'selectPayments',
       'click #select-investments': 'selectInvestments',
@@ -34,13 +34,14 @@ define([
       'click #select-manage': 'selectManage'
     },
 
-    save: function() {},
+
 
     selectOverview: function() {
       $('.list-item').each( function() {
         $(this).removeClass('current');
       });
       $('#select-overview').parent('li').addClass('current');
+
       new OverviewView({ el: $('#dashboard-content') });
     },
 
@@ -50,6 +51,7 @@ define([
       });
       $('#select-payments').parent('li').addClass('current');
       $('#dashboard-section').html('Payments');
+
       new PaymentsView({ el: $('#dashboard-content') });
     },
 
@@ -59,6 +61,7 @@ define([
       });
       $('#select-investments').parent('li').addClass('current');
       $('#dashboard-section').html('Investments');
+
       new InvestmentsView({ el: $('#dashboard-content') });
     },
 
@@ -68,6 +71,7 @@ define([
       });
       $('#select-settings').parent('li').addClass('current');
       $('#dashboard-section').html('Settings');
+
       new SettingsView({ el: $('#dashboard-content') });
     },
 
@@ -77,6 +81,7 @@ define([
       });
       $('#select-manage').parent('li').addClass('current');
       $('#dashboard-section').html('Manage');
+
       new ManageView({ el: $('#dashboard-content') });
     },
 
