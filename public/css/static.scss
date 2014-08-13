@@ -190,6 +190,32 @@ body {
   }
 
 
+//
+//  Mailchimp
+//
+.mailchimp {}
+
+  .inline-inputs {
+
+    input {
+      display: inline;
+      width: calc(50%);
+      border-radius: 0;
+
+      &:first-child {
+        float: left;
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+        border-right: 4px solid white;
+      }
+      &:last-child {
+        float: right;
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+    }
+  } 
+
 
 
 
