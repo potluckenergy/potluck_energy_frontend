@@ -39,17 +39,6 @@ app.get('/', routes.landing);
 app.get('/about', routes.about);
 app.get('/legal', routes.legal);
 app.get('/logout', routes.logout);
-app.get('/api', function(req, res) {
-  res.send({
-    0: {
-      name: 'kevin'
-    },
-    1: {
-      name: 'neville'
-    }
-
-  });
-});
 
 
 //
@@ -61,8 +50,8 @@ app.get('*', function(req, res, next) {
   next(err);
 });
 
-// handling 404 errors
 app.use(function(err, req, res, next) {
+  //  handling 404 errors
   if(err.status !== 404) {
     return next();
   }

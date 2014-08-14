@@ -21,6 +21,9 @@ require.config({
 });
 
 
+//
+//  pushState link config
+//
 require(['jquery', 'backbone'], function($, Backbone) {
   $(document.body).on('click', 'a', function(e){
     if ($(this).attr('href')!='/' && $(this).attr('href')!='/logout') {

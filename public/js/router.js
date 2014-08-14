@@ -24,7 +24,7 @@ define([
     routes: {
       'projects': 'projects',
       
-      'project:id': 'projectId',
+      'project:id': 'project',
       'dashboard': 'dashboard',
       'initiate': 'initiate'
     },
@@ -34,7 +34,7 @@ define([
       projectsView.render();
     },
 
-    projectId: function(id) {
+    project: function(id) {
       var projectView = new ProjectView({id:id});
       projectView.render();
     },

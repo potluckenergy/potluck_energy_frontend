@@ -9,6 +9,7 @@ define([
   'js/views/project/subs/technicalView.js',
   'js/views/project/subs/environmentalView.js',
   'js/views/project/subs/investmentView.js',
+  'js/views/project/subs/savingsView.js'
 ], function(
   $, 
   _, 
@@ -17,7 +18,8 @@ define([
   OverviewView,
   TechnicalView,
   EnvironmentalView,
-  InvestmentView
+  InvestmentView,
+  SavingsView
 ) {
   
   var MainView = Backbone.View.extend({
@@ -28,7 +30,8 @@ define([
       'click #select-overview': 'overview',
       'click #select-technical': 'technical',
       'click #select-environmental': 'environmental',
-      'click #select-investment': 'investment'
+      'click #select-investment': 'investment',
+      'click #select-savings': 'savings'
     },
     
 
@@ -86,6 +89,21 @@ define([
       });
       $('#select-investment').parent('li').addClass('current');
       new InvestmentView({
+        el: $('#project-content'),
+        model: this.model
+      });
+    },
+
+
+    //
+    //  Savings
+    //
+    savings: function() {
+      $('.tab').each( function() {
+        $(this).removeClass('current');
+      });
+      $('#select-savings').parent('li').addClass('current');
+      new SavingsView({
         el: $('#project-content'),
         model: this.model
       });
