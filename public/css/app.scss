@@ -51,9 +51,12 @@ header.header {
   position: fixed;
   width: 100%;
   background: $white;
-  padding: 0 28px 0 28px;
   z-index: 998;
   border-bottom: 1px solid $cloud;
+}
+
+.container-header {
+  padding: 0 28px 0 28px;
 }
 
   .brand {
@@ -71,7 +74,7 @@ header.header {
     padding: 14px 0 14px 0;
 
     ul {
-      li { margin-left: 20px; }
+      li { margin-left: 24px; }
 
       a.link,
       span.link {
@@ -81,23 +84,21 @@ header.header {
         -webkit-transition: color 0.2s;
         cursor: pointer;
 
-        &:hover { color: $grey; }
+        &:hover {
+          color: $grey;
+          svg { fill: $grey; }
+        }
+
+        svg {
+          height: 14px;
+          width: 14px;
+          margin: 0 3px -2px 0;
+        }
       }
     }
   }
-      i.signout {
-        background: $grey;
-        padding: 6px 8px 6px 8px;
-        color: white;
+      
 
-        &:hover {
-          color: lighten($red, 30%);
-        }
-        &:active {
-          background: $slate;
-          color: lighten($red, 20%);
-        }
-      }
 
   .open-nav {
     display: none;
@@ -459,6 +460,7 @@ header.header {
 
   .brand {
     background: url(../media/logotype@2x.png) no-repeat;
+    background-size: 161px 36px;
   }
 
   .nav {
