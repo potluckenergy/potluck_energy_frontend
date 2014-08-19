@@ -1,9 +1,25 @@
+///////////////////////////////////////////////////////////////////
+//  api ///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+var User = require('../models/user.js');
+
+exports.users = function(req, res) {
+  return User.find(function (err, users) {
+    if (err) {
+      return console.log(err);
+    } else {
+      return res.send(users);
+    }
+  });
+}
 
 
-//
-//  app layout signifies backbone app
-//  static layout signifies landing or static pages
-//
+
+
+///////////////////////////////////////////////////////////////////
+//  app layout signifies backbone app /////////////////////////////
+//  static layout signifies landing or static pages ///////////////
+///////////////////////////////////////////////////////////////////
 
 exports.index = function(req, res) {
   res.render('index', {layout: 'app'});
@@ -24,3 +40,4 @@ exports.legal = function(req, res) {
 exports.logout = function(req, res) {
   res.render('logout', {layout: 'static'})
 }
+
