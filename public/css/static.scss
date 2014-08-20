@@ -64,10 +64,12 @@ body {
     background-size: 33px 36px;
     height: 56px;
   }
+}
 
-  .landing-login {
+  .landing-auth {
     float: right;
     width: 33%;
+
     a {
       float: right;
       border-radius: 3px;
@@ -76,18 +78,33 @@ body {
       font-weight: 600;
       color: $grey;
       padding: 3px 10px 3px 10px;
-      margin: 12px 0 12px 0;
+      margin: 12px 0 12px 6px;
       -webkit-transition: all 0.2s;
+
+      &:hover {
+        color: $stormy;
+      }
+      &:active {
+        color: $grey;
+        border-color: $stormy;
+      }
     }
-    a:hover {
-      color: $stormy;
-    }
-    a:active {
-      color: $grey;
-      border-color: $stormy;
+
+    a.landing-signup {
+      border: 1px solid $green;
+      background: $green;
+      color: white;
+
+      &:hover {
+        background: lighten($green, 10%);
+        color: white;
+      }
+      &:active {
+        background: darken($green, 5%);
+        color: $cloud;
+      }
     }
   }
-}
 
 
 

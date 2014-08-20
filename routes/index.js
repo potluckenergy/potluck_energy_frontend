@@ -16,7 +16,7 @@ exports.getUsers = function(req, res) {
 exports.postUser = function(req, res) {
   var user;
   console.log("POST", req.body);
-  user = new UserModel({
+  user = new User({
     firstName:  req.body.firstName,
     lastName:   req.body.lastName,
     email:      req.body.email,
@@ -72,10 +72,6 @@ exports.deleteUser = function(req, res) {
 //  static layout signifies landing or static pages ///////////////
 ///////////////////////////////////////////////////////////////////
 
-exports.index = function(req, res) {
-  res.render('index', {layout: 'app'});
-}
-
 exports.landing = function(req, res) {
   res.render('landing', {layout: 'static'});
 }
@@ -88,11 +84,42 @@ exports.legal = function(req, res) {
   res.render('legal', {layout: 'static'});
 }
 
+
+
+//
+//  login
+//
 exports.login = function(req, res) {
   res.render('login', {layout: 'static'})
 }
 
 
+
+//
+//  signup
+//
+
+exports.getSignup = function(req, res) {
+  res.render('signup', {layout: 'static'});
+}
+
+exports.postSignup = function(req, res) {
+  var user;
+  //  console.log("POST", req.body);
+  user = new User({
+    firstName:  req.body.firstName,
+    lastName:   req.body.lastName,
+    email:      req.body.email,
+    password:   req.body.password,
+    zip:        req.body.zip,
+    township:   req.body.township
+  });
+  user.save( function (err) {
+    if (err) {  return console.log(err); } 
+    else {      return console.log("Created"); }
+  });
+  return res.redirect('/dashboard');
+}
 
 
 
